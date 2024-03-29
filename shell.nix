@@ -19,5 +19,7 @@ pkgs.mkShell {
 
   packages = with pkgs; [
     mpremote
+    cargo-espflash
+    libiconv
   ];
 }
