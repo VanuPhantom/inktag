@@ -18,4 +18,8 @@ public:
     {
         return WiFi.softAP(ssid, password);
     }
+
+    IPAddress GetIP() {
+        return WiFi.localIP();
+    }
 };

@@ -13,6 +13,9 @@ void setup()
   process([]()
           { return network.Start(); },
           "Starting AP...", "AP started ^w^", "Failed to start AP QwQ");
+  Serial.print("IP: ");
+  Serial.print(network.GetIP());
+  Serial.print("\n\r");
   digitalWrite(15, LOW);
 }
 
