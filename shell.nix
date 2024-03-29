@@ -9,6 +9,5 @@ pkgs.mkShell {
 
   packages = with pkgs; [
     platformio
-    libiconv
   ];
 }
