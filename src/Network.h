@@ -16,10 +16,12 @@ public:
 
     bool Start()
     {
+        WiFi.softAPConfig(IPAddress(192, 168, 1, 1), IPAddress(192, 168, 1, 1), IPAddress(255, 255, 255, 0), IPAddress(192, 168, 1, 2));
         return WiFi.softAP(ssid, password);
     }
 
-    IPAddress GetIP() {
-        return WiFi.localIP();
+    IPAddress GetIP()
+    {
+        return WiFi.softAPIP();
     }
 };
